@@ -1,8 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-struct prato
-{
+struct prato{
 	char cor;
 	struct prato *prox;
 };
@@ -40,10 +39,13 @@ int main(void) {
 	add('g');
 	add('y');
 
+	Prato *pilhaAux = pilha;
+	imprime(pilhaAux);
+
 	rem();
 	rem();
 
-	Prato *pilhaAux = pilha;
+	pilhaAux = pilha;
 	imprime(pilhaAux);
 
 	return 0;
